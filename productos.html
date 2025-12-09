@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Shot Golf Store - Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="contenedor barra-nav">
+        <div class="logo-sitio"><img src="assets/logo.png" alt="Logo Green Shot Golf Store"><span>Green Shot Golf Store</span></div>
+        <div class="barra-nav-derecha">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="activo">Productos</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                </ul>
+            </nav>
+            <button class="carrito-btn" id="btnCarrito" aria-label="Ver carrito">
+                <span class="carrito-icono">🛒</span>
+                <span class="carrito-badge" id="carritoCantidad">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="seccion">
+        <div class="contenedor">
+            <h2>Catálogo de productos</h2>
+            <p>
+                Estos son algunos de los productos destacados de <span class="texto-resaltado">Green Shot Golf Store</span>.
+                Podés combinarlos con las promociones vigentes y agregarlos a tu carrito.
+            </p>
+
+            <div class="grid-productos">
+                <article class="card-producto">
+                    <div>
+                        <span class="badge-pequeno">Set completo</span>
+                        <img src="assets/palos.jpg" alt="Set de palos de golf" class="img-producto">
+                        <h3>Bolsa de golf completa con palos</h3>
+                        <p>Incluye bolsa y un set de palos ideal para canchas de 9 y 18 hoyos.</p>
+                        <p class="precio">$ 120.000</p>
+                    </div>
+                    <button
+                        class="btn-agregar-carrito"
+                        data-id="bolsaCompleta"
+                        data-nombre="Bolsa de golf completa con palos"
+                        data-precio="120000">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="card-producto">
+                    <div>
+                        <span class="badge-pequeno">Pelotas</span>
+                        <img src="assets/pelotas.jpg" alt="Pack 12 pelotas de golf" class="img-producto">
+                        <h3>Pack 12 pelotas de golf</h3>
+                        <p>Superficie resistente y control de giro, aptas para práctica y juego.</p>
+                        <p class="precio">$ 18.000</p>
+                    </div>
+                    <button
+                        class="btn-agregar-carrito"
+                        data-id="pelotas"
+                        data-nombre="Pack 12 pelotas de golf"
+                        data-precio="18000">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="card-producto">
+                    <div>
+                        <span class="badge-pequeno">Accesorios</span>
+                        <img src="assets/guante.jpg" alt="Guante de golf antideslizante" class="img-producto">
+                        <h3>Guante de golf antideslizante</h3>
+                        <p>Material respirable y agarre firme para mejorar tu control.</p>
+                        <p class="precio">$ 9.500</p>
+                    </div>
+                    <button
+                        class="btn-agregar-carrito"
+                        data-id="guante"
+                        data-nombre="Guante de golf antideslizante"
+                        data-precio="9500">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="card-producto">
+                    <div>
+                        <span class="badge-pequeno">Bolsas</span>
+                        <img src="assets/bolsa.jpg" alt="Bolsa de golf" class="img-producto">
+                        <h3>Bolsa de golf</h3>
+                        <p>Bolsa ligera con compartimentos para palos y bolsillos para accesorios.</p>
+                        <p class="precio">$ 54.000</p>
+                    </div>
+                    <button
+                        class="btn-agregar-carrito"
+                        data-id="bolsa"
+                        data-nombre="Bolsa de golf"
+                        data-precio="54000">
+                        Agregar al carrito
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="contenedor">
+        <p>© 2025 Green Shot Golf Store - Sitio de ejemplo para actividad de JavaScript.</p>
+    </div>
+</footer>
+
+<div class="carrito-panel" id="carritoPanel">
+    <h2>Carrito</h2>
+    <div id="carritoLista" class="carrito-lista"></div>
+    <p id="carritoTotal" class="carrito-total"></p>
+    <button class="carrito-vaciar" id="carritoVaciar">Vaciar carro</button>
+    <button class="carrito-cerrar" id="carritoCerrar">Cerrar</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Shot Golf Store - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="contenedor barra-nav">
+        <div class="logo-sitio"><img src="assets/logo.png" alt="Logo Green Shot Golf Store"><span>Green Shot Golf Store</span></div>
+        <div class="barra-nav-derecha">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                </ul>
+            </nav>
+            <button class="carrito-btn" id="btnCarrito" aria-label="Ver carrito">
+                <span class="carrito-icono">🛒</span>
+                <span class="carrito-badge" id="carritoCantidad">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="contenedor hero-grid">
+            <div>
+                <span class="badge-deporte">Tienda especializada en Golf</span>
+                <h1>Todo lo que necesitás para tu mejor swing</h1>
+                <p>
+                    En <span class="texto-resaltado">Green Shot Golf Store</span> vas a encontrar palos, pelotas, bolsas
+                    y accesorios pensados para que cada salida a la cancha sea una experiencia distinta.
+                </p>
+                <div class="hero-botones">
+                    <a href="productos.html" class="btn-principal">Ver catálogo</a>
+                    <a href="promociones.html" class="btn-secundario">Promociones vigentes</a>
+                </div>
+            </div>
+            <div class="hero-tarjeta">
+                <h2>Ventajas de comprar en Green Shot</h2>
+                <ul>
+                    <li>Asesoramiento para elegir el palo ideal según tu nivel.</li>
+                    <li>Promociones pensadas para armar tu bolso completo.</li>
+                    <li>Productos seleccionados para canchas de 9 y 18 hoyos.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <h2>Equipá tu juego</h2>
+            <p>
+                Armá tu bolsa de golf con todo lo necesario: drivers, hierros, putters, pelotas, tees,
+                guantes y gorras. Cada producto está elegido para acompañar la precisión y la comodidad
+                que el golf exige.
+            </p>
+        </div>
+    
+    <section class="seccion">
+        <div class="contenedor">
+            <h2>Conocé nuestras canchas favoritas</h2>
+            <div class="carrusel" id="carruselInicio">
+                <img src="assets/hero1.jpg" alt="Cancha de golf 1" class="carrusel-imagen activa">
+                <img src="assets/hero2.jpg" alt="Cancha de golf 2" class="carrusel-imagen">
+                <img src="assets/hero3.jpg" alt="Cancha de golf 3" class="carrusel-imagen">
+                <div class="carrusel-controles">
+                    <button class="carrusel-btn" data-dir="prev">&#10094;</button>
+                    <button class="carrusel-btn" data-dir="next">&#10095;</button>
+                </div>
+                <div class="carrusel-dots">
+                    <button class="carrusel-dot activo" data-index="0"></button>
+                    <button class="carrusel-dot" data-index="1"></button>
+                    <button class="carrusel-dot" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <h2>Categorías destacadas</h2>
+            <div class="grid-productos">
+                <article class="card-producto">
+                    <span class="badge-pequeno">Palos y bolsas</span>
+                    <h3>Bolsa de golf completa con palos</h3>
+                    <p>Un set pensado para salir a jugar de inmediato, con bolsa y palos incluidos.</p>
+                </article>
+                <article class="card-producto">
+                    <span class="badge-pequeno">Pelotas</span>
+                    <h3>Pelotas de alto rendimiento</h3>
+                    <p>Cubiertas resistentes y buen control de giro para todo tipo de cancha.</p>
+                </article>
+                <article class="card-producto">
+                    <span class="badge-pequeno">Accesorios</span>
+                    <h3>Guantes y gorras</h3>
+                    <p>Comodidad y agarre seguro para concentrarte sólo en tu swing.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <h2>Contacto directo</h2>
+            <div class="grid-contacto">
+                <div class="info-contacto">
+                    <p>¿Tenés dudas sobre algún producto o promoción?</p>
+                    <p>Completá tus datos y nos contactamos con vos para ayudarte a elegir lo mejor para tu juego.</p>
+                    <p><strong>Dirección:</strong> Av. Fairway 1800, Buenos Aires</p>
+                    <p><strong>Teléfono:</strong> (011) 5555-1234</p>
+                    <p><strong>Mail:</strong> contacto@greenshotgolfstore.com</p>
+                </div>
+                <form class="form-promos">
+                    <div class="campo-form">
+                        <label for="nombreInicio">Nombre:</label>
+                        <input type="text" id="nombreInicio" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="emailInicio">Correo electrónico:</label>
+                        <input type="email" id="emailInicio" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="telInicio">Teléfono:</label>
+                        <input type="tel" id="telInicio">
+                    </div>
+                    <div class="campo-form">
+                        <label for="mensajeInicio">Mensaje o consulta:</label>
+                        <textarea id="mensajeInicio" required></textarea>
+                    </div>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="contenedor">
+        <p>© 2025 Green Shot Golf Store - Sitio de ejemplo para actividad de JavaScript.</p>
+    </div>
+</footer>
+
+<div class="carrito-panel" id="carritoPanel">
+    <h2>Carrito</h2>
+    <div id="carritoLista" class="carrito-lista"></div>
+    <p id="carritoTotal" class="carrito-total"></p>
+    <button class="carrito-vaciar" id="carritoVaciar">Vaciar carro</button>
+    <button class="carrito-cerrar" id="carritoCerrar">Cerrar</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

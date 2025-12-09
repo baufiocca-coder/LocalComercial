@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Shot Golf Store - Promociones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="contenedor barra-nav">
+        <div class="logo-sitio"><img src="assets/logo.png" alt="Logo Green Shot Golf Store"><span>Green Shot Golf Store</span></div>
+        <div class="barra-nav-derecha">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="promociones.html" class="activo">Promociones</a></li>
+                </ul>
+            </nav>
+            <button class="carrito-btn" id="btnCarrito" aria-label="Ver carrito">
+                <span class="carrito-icono">🛒</span>
+                <span class="carrito-badge" id="carritoCantidad">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="contenedor-promos">
+        <h1>Promociones vigentes</h1>
+        <p>
+            Elegí una promoción de nuestro local de golf, seleccioná el producto y la cantidad,
+            y calculá automáticamente cuánto ahorrás. El precio unitario se completa solo según el producto elegido.
+        </p>
+
+        <form id="form-promociones" class="form-promos">
+            <div class="campo-form">
+                <label for="promo">Tipo de promoción:</label>
+                <select id="promo" name="promo" required>
+                    <option value="">-- Elegí una promoción --</option>
+                    <option value="2x50">50% de descuento en la segunda unidad</option>
+                    <option value="3x2">3x2 en el mismo producto</option>
+                    <option value="10mas30">10% de descuento por compras superiores a $30.000</option>
+                    <option value="comboGYP">Guante + pelotas (comprás ambos y uno va gratis)</option>
+                </select>
+            </div>
+
+            <div class="campo-form" id="campoProducto">
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto" required>
+                    <option value="">-- Elegí un producto --</option>
+                    <option value="pelotas">Pack 12 pelotas de golf</option>
+                    <option value="guante">Guante de golf antideslizante</option>
+                    <option value="bolsa">Bolsa de golf</option>
+                    <option value="bolsaCompleta">Bolsa de golf completa con palos</option>
+                </select>
+            </div>
+
+            <div class="campo-form">
+                <label>Precio unitario:</label>
+                <p><span id="precioUnitario">$0</span></p>
+            </div>
+
+            <div class="campo-form">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" step="1" required>
+            </div>
+
+            <button type="submit">Calcular promoción</button>
+        </form>
+
+        <section id="resultados" class="resultados">
+            <h2>Resultados</h2>
+            <p id="descripcionPromo">Seleccioná una promoción y un producto para ver los detalles.</p>
+            <p><strong>Total sin descuento:</strong> <span id="totalSinDesc">$0</span></p>
+            <p><strong>Descuento aplicado:</strong> <span id="descuento">$0</span></p>
+            <p><strong>Total final:</strong> <span id="totalFinal">$0</span></p>
+            <p><strong>Total final ahorrado (todas las promociones):</strong> <span id="totalAhorrado">$0</span></p>
+            <p id="mensajeExtra" class="mensaje-extra"></p>
+            <button type="button" id="btnAgregarPromoCarrito" class="btn-principal" style="margin-top:1rem;">
+                Agregar esta promoción al carrito
+            </button>
+        </section>
+
+        <section class="explicacion-promos">
+            <h2>¿Cómo funcionan estas promociones?</h2>
+            <ul>
+                <li><strong>50% en la segunda unidad:</strong> en cada par, la segunda unidad del mismo producto tiene 50% de descuento.</li>
+                <li><strong>3x2:</strong> llevás 3 unidades del mismo producto y pagás sólo 2.</li>
+                <li><strong>10% off +$30.000:</strong> si el total supera los $30.000, se aplica un 10% de descuento.</li>
+                <li><strong>Guante + pelotas:</strong> comprando un combo guante + pelotas, una de las dos unidades va gratis (se descuenta la de menor precio).</li>
+            </ul>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <div class="contenedor">
+        <p>© 2025 Green Shot Golf Store - Sitio de ejemplo para actividad de JavaScript.</p>
+    </div>
+</footer>
+
+<div class="carrito-panel" id="carritoPanel">
+    <h2>Carrito</h2>
+    <div id="carritoLista" class="carrito-lista"></div>
+    <p id="carritoTotal" class="carrito-total"></p>
+    <button class="carrito-vaciar" id="carritoVaciar">Vaciar carro</button>
+    <button class="carrito-cerrar" id="carritoCerrar">Cerrar</button>
+</div>
+
+<script src="main.js"></script>
+<script src="promociones.js"></script>
+</body>
+</html>
